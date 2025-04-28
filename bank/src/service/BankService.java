@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+
 import domain.Customer;
 import utils.BankUtils;
 
@@ -16,12 +18,22 @@ public class BankService {
 	
 	public void menu() {
 		if(customerService.getLoginCustomer() == null) { //
-			int no = BankUtils.nextInt("1. 회원가입 2. 로그인");
+			int no = BankUtils.nextInt("1. 회원가입  2. 로그인  3. 로그아웃  4. 조회  5. 수정  6. 탈퇴");
 			switch(no) {
 				case 1:
 					customerService.register(); break;
 				case 2:
 					customerService.login(); break;
+				case 3:
+					customerService.logout(); break;
+				case 4:
+					customerService.read(); break;
+				case 5:
+					customerService.modify(); break;
+				case 6:
+					customerService.out(); break;
+//				case 7:
+//					customerService.modify(); break;
 			}
 		}
 		else { //
@@ -33,5 +45,6 @@ public class BankService {
 		
 			}
 		}
+		
 	}
 }

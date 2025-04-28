@@ -16,8 +16,8 @@ public class BankUtils {
 		
 	}
 	
-	public static long nectLong(String msg) {
-		return Integer.parseInt(nextLine(msg));   //nextint는 버퍼이슈때문에 사용안함
+	public static long nextLong(String msg) {
+		return Integer.parseInt(nextLine(msg));  
 		
 	}
 	
