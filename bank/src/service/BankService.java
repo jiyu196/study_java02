@@ -13,6 +13,7 @@ public class BankService {
 	}
 	
 	private CustomerService customerService = CustomerService.getInstance();
+	private AccountService accountService = AccountService.getInstance();
 	
 	public void menu() {
 		if(customerService.getLoginCustomer() == null) { //
@@ -26,9 +27,25 @@ public class BankService {
 		}
 		else { //
 			System.out.println("로그인 상태");
-			int no = BankUtils.nextInt("1. 로그아웃");
+			int no = BankUtils.nextInt("1. 내 정보 보기  2. 정보수정  3. 회원탈퇴  4. 개설  5. 입금  6. 출금  7. 이체  8. 해지  9. 로그아웃");
 			switch(no) {
 			case 1:
+				customerService.mypage(); break;
+			case 2:
+				customerService.modify(); break;
+			case 3:
+				customerService.remove(); break;
+			case 4:
+				accountService.open(); break;
+			case 5:
+				accountService.deposit(); break;
+			case 6:
+				accountService.withdraw(); break;
+			case 7:
+				accountService.transfer(); break;
+			case 8:
+				accountService.close(); break;
+			case 9:
 				customerService.logout(); break;
 		
 			}

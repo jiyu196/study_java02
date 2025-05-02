@@ -16,14 +16,14 @@ public class BankUtils {
 		
 	}
 	
-	public static long nectLong(String msg) {
+	public static long nextLong(String msg) {
 		return Integer.parseInt(nextLine(msg));   //nextint는 버퍼이슈때문에 사용안함
 		
 	}
 	
 	
 	public static boolean nextConfirm(String msg) {
-		String s = nextLine(msg);
+		String s = nextLine(msg + "[y/n]");
 		return s.equalsIgnoreCase("y") || s.equals("yes");
 	}
 }
