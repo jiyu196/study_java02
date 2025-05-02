@@ -1,5 +1,7 @@
 package domain;
 
+
+
 public class Customer {
 	//이름, 연락처, 이메일, 회원번호, 아이디, 비밀번호
 	private int no; //회원번호
@@ -93,4 +95,7 @@ public class Customer {
 	public String toString() {
 		return String.format("Customer [no=%s, name=%s, tel=%s, email=%s, id=%s, pw=%s]", no, name, tel, email, id, pw);
 	}
+
+
+	
 }

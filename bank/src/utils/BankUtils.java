@@ -17,7 +17,11 @@ public class BankUtils {
 	}
 	
 	public static long nextLong(String msg) {
+<<<<<<< HEAD
 		return Integer.parseInt(nextLine(msg));   //nextint는 버퍼이슈때문에 사용안함
+=======
+		return Integer.parseInt(nextLine(msg));  
+>>>>>>> 20fd4608ef95abc23d59b50b7dff181ab1e16099
 		
 	}
 	
